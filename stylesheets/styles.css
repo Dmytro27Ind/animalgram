@@ -36,6 +36,11 @@ body{
 .detail-image-frame{
     text-align: center;
     position: relative;
+    transition: transform 750ms cubic-bezier(.4,.03,.69,1.05);
+}
+.is-tiny{
+    transform: scale(0.75);
+    transition: transform 0ms;
 }
 .detail-image{
     width: 90%;
@@ -53,7 +58,7 @@ body{
     display: flex;
     justify-content: space-between;
     list-style: none;
-    padding: 0;
+    padding: 20px 0;
     white-space: nowrap;
     overflow-x: auto;
 }
@@ -64,6 +69,10 @@ body{
     border: 1px solid rgb(255,255,255);
     border: 1px solid rgba(255,255,255, 0.2);
     background-color: #333333;
+    transition: transform 100ms ease-in-out;
+}
+.thumbnail-item:hover{
+    transform: scale(1.15);
 }
 .thumbnail-image{
     display: block;
@@ -99,6 +108,7 @@ body{
         overflow-x: hidden;
         margin-right: 20px;
         margin-top: 0;
+        padding: 0 20px;
     }
     .detail-image-container{
         order: 0;
